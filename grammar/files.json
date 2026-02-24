@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-23T00:00:00Z",
+  "minAppVersion": "1.0.0",
+  "languages": ["en-US", "en-IN", "hi-IN"],
+  "commands": {
+    "en-US": [
+      {
+        "file": "preface.xml",
+        "hash": ""
+      },
+      {
+        "file": "request.xml",
+        "hash": ""
+      }
+    ],
+    "en-IN": [
+      {
+        "file": "preface.xml",
+        "hash": ""
+      },
+      {
+        "file": "request.xml",
+        "hash": ""
+      }
+    ],
+    "hi-IN": [
+      {
+        "file": "preface.xml",
+        "hash": ""
+      },
+      {
+        "file": "request.xml",
+        "hash": ""
+      }
+    ]
+  },
+  "actions": {
+    "en-US": [
+      {
+        "file": "backup.xml",
+        "hash": ""
+      },
+      {
+        "file": "air.xml",
+        "hash": ""
+      },
+      {
+        "file": "k9.xml",
+        "hash": ""
+      },
+      {
+        "file": "swat.xml",
+        "hash": ""
+      },
+      {
+        "file": "code2.xml",
+        "hash": ""
+      },
+      {
+        "file": "code3.xml",
+        "hash": ""
+      },
+      {
+        "file": "panic.xml",
+        "hash": ""
+      }
+    ],
+    "en-IN": [
+      {
+        "file": "backup.xml",
+        "hash": ""
+      },
+      {
+        "file": "air.xml",
+        "hash": ""
+      },
+      {
+        "file": "k9.xml",
+        "hash": ""
+      },
+      {
+        "file": "swat.xml",
+        "hash": ""
+      },
+      {
+        "file": "code2.xml",
+        "hash": ""
+      },
+      {
+        "file": "code3.xml",
+        "hash": ""
+      },
+      {
+        "file": "panic.xml",
+        "hash": ""
+      }
+    ],
+    "hi-IN": [
+      {
+        "file": "backup.xml",
+        "hash": ""
+      },
+      {
+        "file": "air.xml",
+        "hash": ""
+      },
+      {
+        "file": "k9.xml",
+        "hash": ""
+      },
+      {
+        "file": "swat.xml",
+        "hash": ""
+      },
+      {
+        "file": "code2.xml",
+        "hash": ""
+      },
+      {
+        "file": "code3.xml",
+        "hash": ""
+      },
+      {
+        "file": "panic.xml",
+        "hash": ""
+      }
+    ]
+  },
+  "_comment": "Increment 'version' when updating files. App will only re-download if version changed.",
+  "_note": "Add SHA256 hash for each file for integrity verification (optional but recommended)."
+}

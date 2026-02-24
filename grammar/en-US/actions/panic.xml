@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Action>
+    <Name>panic</Name>
+    <Commands>
+        <string>none</string>
+    </Commands>
+    <Phrases>
+        <string>officer down</string>
+        <string>officer needs help</string>
+        <string>shots fired</string>
+        <string>code 99</string>
+        <string>code ninety nine</string>
+        <string>in pursuit</string>
+        <string>vehicle pursuit</string>
+        <string>foot pursuit</string>
+    </Phrases>
+    <Target>panic</Target>
+</Action>

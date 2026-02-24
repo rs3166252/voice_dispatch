@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Action>
+    <Name>swat</Name>
+    <Commands>
+        <string>request</string>
+    </Commands>
+    <Phrases>
+        <string>SWAT</string>
+        <string>SWAT team</string>
+    </Phrases>
+    <Target>swat</Target>
+</Action>

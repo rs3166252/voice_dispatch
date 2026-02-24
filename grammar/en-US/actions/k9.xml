@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Action>
+    <Name>k9</Name>
+    <Commands>
+        <string>request</string>
+    </Commands>
+    <Phrases>
+        <string>K9</string>
+        <string>K9 unit</string>
+        <string>canine</string>
+        <string>canine unit</string>
+    </Phrases>
+    <Target>k9</Target>
+</Action>
