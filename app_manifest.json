@@ -2,7 +2,7 @@
   "appVersion": "1.0.0",
   "minGrammarVersion": "1.0.0",
   "releaseDate": "2026-02-24T00:00:00Z",
-  "downloadUrl": "https://raw.githubusercontent.com/rs3166252/voice_dispatch/main/VoiceDispatch_Distribution/VoiceDispatchSpeech.exe",
+  "downloadUrl": "https://raw.githubusercontent.com/rs3166252/voice_dispatch/main/VoiceDispatchSpeech.exe",
   "changeLog": [
     "✅ Initial release with XML grammar system",
     "✅ Smart version comparison",

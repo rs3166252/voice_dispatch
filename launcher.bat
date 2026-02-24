@@ -10,6 +10,9 @@ echo Voice Dispatch - Launcher
 echo ================================
 echo.
 
+REM Always run from the script directory
+set "SCRIPT_DIR=%~dp0"
+pushd "%SCRIPT_DIR%"
 REM Check if in correct directory
 if not exist "app_manifest.json" (
     echo [Launcher] ERROR: app_manifest.json not found
@@ -18,16 +21,26 @@ if not exist "app_manifest.json" (
     exit /b 1
 )
 
-REM Check for updates silently
-echo [Launcher] Checking for updates...
-powershell -NoProfile -ExecutionPolicy Bypass -File "update.ps1" > nul 2>&1
+REM Check for updates silently (if update.ps1 exists)
+if exist "update.ps1" (
+    echo [Launcher] Checking for updates...
+    powershell -NoProfile -ExecutionPolicy Bypass -File "update.ps1" > nul 2>&1
 
-if errorlevel 1 (
-    echo [Launcher] Update check failed, running local version
+    if errorlevel 1 (
+        echo [Launcher] Update check failed, running local version
+    )
+) else (
+    echo [Launcher] update.ps1 not found, skipping update check
 )
 
 REM Start the app
 echo [Launcher] Starting VoiceDispatchSpeech...
-start "" "VoiceDispatchSpeech.exe"
+if exist "VoiceDispatchSpeech.exe" (
+    start "" "VoiceDispatchSpeech.exe"
+) else (
+    echo [Launcher] ERROR: VoiceDispatchSpeech.exe not found
+    pause
+    exit /b 1
+)
 
 exit /b 0

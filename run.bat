@@ -1,16 +1,25 @@
 @echo off
 title Voice Dispatch - Speech Recognition
 echo ================================================
-echo Voice Dispatch - Speech Recognition
+echo Starting Voice Dispatch Speech Recognition...
 echo ================================================
 echo.
+
+REM Always run from the script directory
+set "SCRIPT_DIR=%~dp0"
+pushd "%SCRIPT_DIR%"
+
 echo Make sure to keep this window open while playing!
 echo Press Ctrl+C to stop.
 echo.
-if not exist VoiceDispatchSpeech.exe (
+
+if exist VoiceDispatchSpeech.exe (
+    VoiceDispatchSpeech.exe
+) else (
+    echo.
     echo ERROR: VoiceDispatchSpeech.exe not found!
-    echo Please make sure all files are in the same folder.
+    echo.
+    echo Please place VoiceDispatchSpeech.exe in this folder.
+    echo.
     pause
-    exit /b 1
 )
-VoiceDispatchSpeech.exe
