@@ -1,0 +1,8 @@
+{
+  "Language": "en-IN",
+  "ConfidenceThreshold": 30,
+  "Port": 8765,
+  
+  "_comment": "Language options: en-US (English - United States), en-IN (English - India), en-GB (English - United Kingdom), en-AU (English - Australia), en-CA (English - Canada)",
+  "_note": "Change 'Language' to match your Windows Speech Recognition language. Check Windows Settings > Time & Language > Speech to see what's installed."
+}
