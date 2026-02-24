@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "githubRepo": "https://raw.githubusercontent.com/rs3166252/voice_dispatch/main",
+  "githubRepo": "https://raw.githubusercontent.com/rs3166252/voice_dispatch/main/Voice_App_for_Player",
   "updateOnStartup": true,
   
   "_comment": "Replace YOUR_USERNAME with your GitHub username. The app will download grammar/files.json from this repo.",
