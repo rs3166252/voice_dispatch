@@ -1,0 +1,16 @@
+{
+  "appVersion": "1.0.0",
+  "minGrammarVersion": "1.0.0",
+  "releaseDate": "2026-02-24T00:00:00Z",
+  "downloadUrl": "https://raw.githubusercontent.com/rs3166252/voice_dispatch/main/releases/latest/VoiceDispatchSpeech.exe",
+  "changeLog": [
+    "✅ Initial release with XML grammar system",
+    "✅ Smart version comparison",
+    "✅ SHA256 hash verification",
+    "✅ Offline fallback mode"
+  ],
+  "sha256": "",
+  "fileSize": 0,
+  "_note": "Set downloadUrl to your GitHub releases. App will auto-download if appVersion > local version.",
+  "_warning": "Only files listed here are auto-downloaded. No registry edits. No certificates needed."
+}
