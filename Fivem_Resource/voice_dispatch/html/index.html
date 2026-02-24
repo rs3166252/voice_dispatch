@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        #voiceStatus {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            display: none;
+            text-align: center;
+            min-width: 300px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                bottom: -50px;
+                opacity: 0;
+            }
+            to {
+                bottom: 20px;
+                opacity: 1;
+            }
+        }
+
+        #voiceStatus.listening {
+            background: rgba(59, 130, 246, 0.9);
+            border-color: rgba(96, 165, 250, 0.5);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        #voiceStatus.processing {
+            background: rgba(34, 197, 94, 0.9);
+            border-color: rgba(74, 222, 128, 0.5);
+        }
+
+        #voiceStatus.error {
+            background: rgba(239, 68, 68, 0.9);
+            border-color: rgba(248, 113, 113, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5);
+            }
+            50% {
+                transform: translateX(-50%) scale(1.05);
+                box-shadow: 0 4px 25px rgba(59, 130, 246, 0.8);
+            }
+        }
+
+        #voiceIcon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        #transcriptText {
+            display: block;
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+        }
+
+        /* Dispatch message overlay */
+        .dispatch-message {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 100, 255, 0.95);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 100, 255, 0.6);
+            border: 3px solid rgba(100, 200, 255, 0.8);
+            min-width: 400px;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+            animation: dispatchSlideIn 0.4s ease-out;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        @keyframes dispatchSlideIn {
+            from {
+                top: 10%;
+                opacity: 0;
+                transform: translateX(-50%) scale(0.8);
+            }
+            to {
+                top: 20%;
+                opacity: 1;
+                transform: translateX(-50%) scale(1);
+            }
+        }
+
+        .dispatch-icon {
+            font-size: 40px;
+            margin-right: 20px;
+            animation: dispatchRing 2s ease-in-out infinite;
+        }
+
+        @keyframes dispatchRing {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            10%, 30% {
+                transform: rotate(-15deg);
+            }
+            20%, 40% {
+                transform: rotate(15deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .dispatch-text {
+            flex: 1;
+        }
+
+        .dispatch-header {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        .dispatch-content {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div id="voiceStatus">
+        <span id="voiceIcon">🎤</span>
+        <span id="statusText">Listening...</span>
+        <span id="transcriptText"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
